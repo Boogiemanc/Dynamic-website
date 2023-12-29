@@ -1,0 +1,107 @@
+.Horizonlist{
+    list-style-type: none;
+margin: 1%;
+overflow: hidden;
+background-color: rgb(0, 0, 0);
+font-family: 'Alumni Sans';
+z-index: 40;
+top: auto;
+height: 10%;
+}
+.main-sticker{
+    z-index: 10;
+
+    position: sticky;
+    scroll-padding: 40px;
+   
+    top: -1px;
+}
+
+
+.Horizonlist li{
+
+   
+    display: inline-block;
+    padding: 1rem;
+}
+#center{
+width: 100%;
+text-align: center;
+    
+}
+ul::after{
+
+    color: #eaeaea;
+
+}
+ul.Horizonlist a :hover{
+    color:#eaeaea ;
+    
+    
+    
+    
+    }
+    
+    
+    ul.Horizonlist li a{
+        
+        color: rgb(219, 219, 219);
+        
+        font-size: 2.5rem;
+        position: relative;
+        transition: color 1s ease 100ms;
+        padding: 5px;
+        
+        }
+    
+        a{
+    
+            text-decoration: none;
+            outline: none;
+            cursor: pointer;
+    
+    
+        }
+        body{ 
+
+            margin: 0px;
+        
+        background-color: black;
+            }
+
+            p{
+font-family: "Open Sans";
+color: #eaeaea;
+
+
+
+            }
+.thumbnail{
+overflow: hidden;
+max-width: 600px;
+position: relative;
+} 
+
+.imagec{
+position: relative;
+display: flex;
+width: 30%;
+height: 25%;
+float: left;
+
+}
+        .text_container{
+            display: grid;
+         width: 50%;
+        top: 10%;
+         margin-left:25%;
+         height: 100%;
+         margin-right: 25%;
+
+
+        }
+        .img_contain-S{
+
+
+
+        }
