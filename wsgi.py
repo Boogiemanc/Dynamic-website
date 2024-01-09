@@ -1,4 +1,7 @@
 
-from Port_Art import app as application
+
+from Port_Art import app as app
 if __name__ == "__main__":
-    application.run()
+    
+    app.run()
+    
