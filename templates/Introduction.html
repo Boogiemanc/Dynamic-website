@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet"  type="text/css" href="{{url_for ('static', filename= 'css/RestOfTheWeb.css')}}">
     <link rel="stylesheet"  type="text/css" href="{{url_for ('static', filename= 'css/loading.css')}}">
+    <link rel="icon" type="image/ico" href="{{ url_for('static', filename='favico_io/favicon.ico') }}">
     <title>My dynamic portfolio website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Playpen+Sans:wght@200&family=Roboto:wght@100;500;700&family=Saira+Condensed:wght@100;200;300&family=Sometype+Mono&family=Unbounded:wght@500&display=swap" 
 rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100&family=Libre+Barcode+39+Extended&family=Open+Sans&display=swap" rel="stylesheet">
-    
+   
  
   </head>
   <body>
@@ -43,15 +44,18 @@ rel="stylesheet">
   </div>
 </div>
 <section>
-<div class="text_container" id='C_text'>
-<div class="img_contain-S" >
-<div class="thumbnail">
-<img class="imagec" src="Image\standholder.jpg" alt="placeholder">
-</div>
-</div>
 
-<div class="information_text">
- {% if Trigger_Index >= 0.5 %}
+  <div class="text_container" id='C_text'>
+
+
+    
+ {% if Trigger_Index >= 0.3 %}
+ <div class="img_contain-S" >
+  <div class="thumbnail">
+  <img class = 'imagec' src="{{url_for ('static', filename= 'Image/proflepic.jpg')}}">
+  </div>
+  </div>
+  <div class="information_text">
    {% for i in Para_Real %}
    <p> {{i}} </p>
     {% endfor %}
@@ -85,4 +89,5 @@ rel="stylesheet">
 </section>
 </main>
 </body>
+
 </html>

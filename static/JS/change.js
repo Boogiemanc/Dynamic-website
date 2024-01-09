@@ -1,7 +1,7 @@
 const c = document.getElementById("Drawing_Text");
 c.width = window.innerWidth;
 c.height = window.innerHeight;
-var gh = document.getElementById("C_text").style.marginLeft = '0';
+var gh = document.getElementById("C_text").style.paddingLeft = '0';
 
 const ctx = c.getContext('2d',{ alpha: false });
 ctx.fillStyle = '#0f0f0f';

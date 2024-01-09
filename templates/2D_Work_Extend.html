@@ -2,11 +2,17 @@
 
 {%block fliter%}
 <div class='row'> 
-{% for X in  testingQ %}
+  {% for X in  testingQ %}
   {% if loop.index0 %5 == 0%}
   <div class ='column'> 
     {% endif %}
-    <img class='WorkDis'   src = {{X}} >
+    <div class='img_dis_container'>
+    <img class='WorkDis'   src = {{X[0]}} >
+    <div class="dis_descp">
+      <h1> {{X[1]}} </h1>
+        <p>{{X[2]}} </p>
+    </div> 
+  </div>
    {% if loop.index0 % 5 == 4 or loop.last %}
   </div>
   {% endif %}

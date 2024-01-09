@@ -80,19 +80,16 @@ color: #eaeaea;
 
             }
 .thumbnail{
-overflow: hidden;
-max-width: 600px;
-position: relative;
+   position: relative;
+   padding-left: 41%;
 } 
 
 .imagec{
-position: relative;
-display: flex;
-width: 30%;
-height: 25%;
-float: left;
+   display: flex;
+   width: 25%;
+ }
 
-}
+
         .text_container{
             display: grid;
          width: 50%;
@@ -103,6 +100,11 @@ float: left;
 
 
         }
+
+.footer{
+height: 10%;
+background-color: #040404;
+}
      /*Menu CSS ENDS HERE-------------------------------------------- */
 
      .display_reactionL{
@@ -234,6 +236,32 @@ float: left;
         display: inherit;
         width: 100%;
      }
+     .img_dis_container{
+      position: relative;
+      max-width: 800px; 
+      margin: 0 auto;
+      
+     }
+     .img_dis_container .dis_descp{
+      position: absolute; 
+      bottom: 0; 
+      background: rgb(0, 0, 0); 
+      background: rgba(0, 0, 0, 0.5); 
+      color: #f1f1f1;
+      width: 100%; 
+      padding: 20px; 
+      font-family:'Alumni Sans' ;
+      opacity: 0;
+      
+     }
+     .dis_descp:hover{
+    
+      opacity: 100%;
+      transition: opacity 1s ease-in-out;
+
+     }
+ 
+     
      /*SOcials Css---------------------------------*/
      .Social_container{
 
@@ -266,7 +294,7 @@ float: left;
 
         border: 2px solid #c3c3c3;
       }
-     #Msg_Board{
+      .Big_msg{
           direction: rtl;
         width: 100%;
         height:100px;
@@ -336,5 +364,19 @@ display: none;
  
  
        }
+      ul.Horizonlist li a{
+         font-size: 2rem;
+         padding: 0;
+      }
+      .row{
+
+         display: contents;
+      }
+
+      .Horizonlist li{
+         display: inline;
+         padding: 1.5%;
+
+      }
     
 }

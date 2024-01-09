@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet"  type="text/css" href="{{url_for ('static', filename= 'css/Main_Index.css')}}">
+    <link rel="icon" type="image/ico" href="{{ url_for('static', filename='favico_io/favicon.ico') }}">
     <title>My dynamic portfolio website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +53,7 @@ rel="stylesheet">
  <div class="section_Container"> 
  
    <figure class="img_Container">
- <img class = "img_list" id="small-list"  src="https://cdn.cara.app/production/posts/f6aebc43-bc48-49f2-bac6-2aabfdd74a1f/pastawooloo-4NsNrXzHhvdyvQuKr3JQU-the-funny-7.png"/>
+ <a href='/Intro'><img class = "img_list" id="small-list"  src="https://cdn.cara.app/production/posts/f6aebc43-bc48-49f2-bac6-2aabfdd74a1f/pastawooloo-4NsNrXzHhvdyvQuKr3JQU-the-funny-7.png"/></a>
  
  </figure>
  </div>
@@ -73,7 +74,7 @@ rel="stylesheet">
     <div class="section_Container"> 
     
       <figure class="img_Container">
-    <img class = "img_list" id="small-list"  src="{{url_for ('static', filename= 'Image/i.jpg')}}"/>
+        <a href='/Work' > <img class = "img_list" id="small-list"  src="{{url_for ('static', filename= 'Image/i.jpg')}}"/></a>
     
   </figure>
   <div class="block">
@@ -119,4 +120,5 @@ rel="stylesheet">
   </section>
 </div>
   </body>
+
 </html>
