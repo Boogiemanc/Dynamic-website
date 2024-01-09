@@ -45,6 +45,7 @@ nbclient            ==      0.8.0
 nbconvert           ==      7.9.2
 nbformat            ==      5.9.2
 nest-asyncio        ==      1.5.8
+nh3                 ==      0.2.15
 notebook_shim        ==     0.2.3
 overrides          ==      7.4.0
 packaging          ==       23.2

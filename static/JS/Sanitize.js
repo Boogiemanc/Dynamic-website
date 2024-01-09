@@ -1,8 +1,8 @@
 
-const Inputs_TextBox = document.getElementsByClassName('sm_Input').value;
-const Messages_Box = document.getElementsByClassName('Big_msg').value;
-
-
+var Inputs_TextBox = document.getElementsByClassName('sm_Input').value;
+ var Messages_Box = document.getElementsByClassName('Big_msg').value;
+const sanitize = new Sanitizer()
+Inputs_TextBox = Inputs_TextBox
 
 
 

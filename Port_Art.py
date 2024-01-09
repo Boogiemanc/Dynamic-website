@@ -1,5 +1,5 @@
 import os
-import json,gunicorn
+import json,gunicorn, nh3
 import random, math, flask_mail,secrets, string
 from flask_sqlalchemy import SQLAlchemy 
 from flask_mail import Mail, Message
@@ -22,6 +22,8 @@ app.config.update(dict(
 ))
 
 #######################################DB SETUP####################################
+
+
 db = SQLAlchemy()
 
 db_Name = os.path.join(os.getcwd(), 'whispers.db')
@@ -110,9 +112,13 @@ def show_Page2():
 
     if request.method == 'POST':
         if 'Name' in request.form:
-         Name = request.form.get('Name', default="Error")
-         Email = request.form.get('Email', default="Error")
+       
+         
+         Name = nh3.clean_text(request.form.get('Name', default="Error"))
+         Email =nh3.clean_text( request.form.get('Email', default="Error"))
          Msg = request.form.get('Message', default="Error")
+         Msg = nh3.clean_text(Msg)
+         print(Msg +'HERERRERERE')
          msg = Message('Auto_Message from '+ Name,
                       sender=Email,
                       
@@ -124,7 +130,7 @@ def show_Page2():
         else:
             
          UID = ''.join(secrets.choice(string.ascii_letters)for _ in range(5))
-         oRIGINAL_Msg = request.form.get('Msg',default="Error")
+         oRIGINAL_Msg =  nh3.clean_text(request.form.get('Msg',default="Error"))
         
          BroKeN =list(oRIGINAL_Msg)
          random.shuffle(BroKeN)
