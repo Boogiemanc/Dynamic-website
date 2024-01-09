@@ -90,7 +90,7 @@ def show_Page3():
      TagQuery = cleaning(connect.execute(ARTWK).fetchall())
      Tag_NameQuery = cleaning(connect.execute(Tag_Name).fetchall())
 
-     return render_template('2D_work.html', testingQ =TagQuery,Tags = Tag_NameQuery)
+     return render_template('/work', testingQ =TagQuery,Tags = Tag_NameQuery)
     
  ###########################SOCIALS PAGE#########################   
 @app.route('/Socials',methods = ['GET','POST'])
