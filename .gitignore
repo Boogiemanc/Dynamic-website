@@ -1,4 +1,7 @@
-/myVenv
-/node_modules
-/package.json
-/package-lock.json
+.myVenv
+node_modules/
+package.json
+package-lock.json/
+.vscode
+__pycache__/
+*.vrm
