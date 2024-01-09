@@ -1,23 +1,46 @@
 
 const Inputs_TextBox = document.getElementsByClassName('sm_Input').value;
 const Messages_Box = document.getElementsByClassName('Big_msg').value;
-const Pushbutton_MsgB = document.getElementById("Big_TxT_Sub");
 
 
-function sendMsgtoDB(){
 
 
+
+//SEND Messages to the DB
+
+function timeout_sub(){
+  document.getElementById("Big_TxT_Sub").disabled = true;
+   
+    
+  setTimeout(()=> {
+    document.getElementById("Big_TxT_Sub").disabled = false;
+   
+   
+    document.getElementById("Big_TxT_Sub").style.pointerEvents= 'auto';
+ 
+  },5000)
+  
+  document.getElementById("Big_TxT_Sub").style.pointerEvents= 'none';
+ 
 }
 
-
   window.onload = function(){
+    //Send info to flask mail......
   const Form_EM = document.getElementById('Email_Form');
   const Form_MSG = document.getElementById('MSG_Form');
-  //Send info to flask mail......
+  
+   //remove submit btn 
   Form_EM .onsubmit = function(event){
     event.preventDefault();
-  
-
+    document.getElementById('Email_Query').disabled = true;
+    document.getElementById('Email_Query').style.pointerEvents= 'none';
+    setTimeout(()=> {
+      
+      document.getElementById('Email_Query').disabled = false;
+     
+      
+      document.getElementById('Email_Query').style.pointerEvents= 'auto';
+    },5000)
  var SusBot =document.getElementById("Sus_Name").value;
  var Name = document. getElementById("Name").value;
  var Email = document. getElementById("email").value;
@@ -26,9 +49,9 @@ function sendMsgtoDB(){
 
  
  if(SusBot.length>0 ){
-
+//CHECK if the honey pot catches input 
    
-    document.getElementsByClassName("social_msg").innerHTML = 'ER0R: Beep  Bot Detected';
+    document.getElementsByClassName("social_msg").value = 'ER0R: Beep  Bot Detected';
     return false
  }else{
     
@@ -45,7 +68,7 @@ function sendMsgtoDB(){
          document. getElementById("Name").value =' ';
          document. getElementById("email").value =' ';
          document. getElementById("message").value =' ';
-         console.log(document. getElementById("Name").innerHTML);
+         
         }
       } else {
         console.error(xhttp.statusText);
@@ -53,6 +76,8 @@ function sendMsgtoDB(){
       
     };
     xhttp.send(params);
+    
+    
     return false;
  }
 
@@ -60,7 +85,7 @@ function sendMsgtoDB(){
 //Send Info to DataBase and use as whspers in Introduction....
  Form_MSG.onsubmit = function(event){
     var Msg = document. getElementById("Msg_Board").value;
-    
+    timeout_sub();
     var xhttp = new XMLHttpRequest();
     var para_Msg = 'Msg='+Msg;
     xhttp.open('POST', 'Socials', true); 
@@ -71,8 +96,8 @@ function sendMsgtoDB(){
         if (xhttp.status === 200) {
         
          
-         document. getElementById("Msg_Board").value =' ';
-        
+         document. getElementById("Msg_Board").value ='Sent! Please wait for 5 seconds';
+         
         }
       } else {
         console.error(xhttp.statusText);

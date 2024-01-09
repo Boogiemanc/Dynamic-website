@@ -320,6 +320,7 @@ background-color: #040404;
          border: none;
          font-family: 'Alumni Sans';
          font-size: 1.5rem;
+         display: block;
 
         
      }
