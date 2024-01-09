@@ -30,7 +30,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + db_Name
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 connect = engine.connect()
 MD = DB.MetaData()
-IDB = DB.Table('Text_Intro', MD , autoload_with=engine) 
+
 WDB = DB.Table('Dialouge_Whispers', MD, autoload_with=engine)
 ARTDB = DB.Table('My_Work_List', MD,autoload_with=engine)
 TAG_LINK = DB.Table('Tag_List', MD,autoload_with=engine)
