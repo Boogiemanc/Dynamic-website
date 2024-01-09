@@ -24,7 +24,7 @@ app.config.update(dict(
 #######################################DB SETUP####################################
 db = SQLAlchemy()
 
-db_Name = 'whispers.db'
+db_Name = os.path.join(os.getcwd(), 'whispers.db')
 engine = DB.create_engine('sqlite:///' + db_Name, echo= True)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + db_Name
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
