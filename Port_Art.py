@@ -118,7 +118,6 @@ def show_Page2():
          Email =nh3.clean_text( request.form.get('Email', default="Error"))
          Msg = request.form.get('Message', default="Error")
          Msg = nh3.clean_text(Msg)
-         print(Msg +'HERERRERERE')
          msg = Message('Auto_Message from '+ Name,
                       sender=Email,
                       
