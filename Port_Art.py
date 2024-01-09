@@ -113,7 +113,7 @@ def show_Page2():
          Name = request.form.get('Name', default="Error")
          Email = request.form.get('Email', default="Error")
          Msg = request.form.get('Message', default="Error")
-         msg = Message('Auto_Message from'+ Name,
+         msg = Message('Auto_Message from '+ Name,
                       sender=Email,
                       
                       recipients=["pastawooloo766@gmail.com"])
