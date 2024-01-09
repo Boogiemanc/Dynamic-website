@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html id ='WorkListDis' lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"  type="text/css" href="{{url_for ('static', filename= 'css/RestOfTheWeb.css')}}">
+    <title>My dynamic portfolio website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Playpen+Sans:wght@200&family=Roboto:wght@100;500;700&family=Saira+Condensed:wght@100;200;300&family=Sometype+Mono&family=Unbounded:wght@500&display=swap" 
+rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100&family=Libre+Barcode+39+Extended&family=Open+Sans&display=swap" rel="stylesheet">
+
+
+<script  src="{{url_for ('static', filename= 'JS/Sanitize.js')}}"></script> 
+</head>
+  <body>
+<main>
+    
+
+<header class="main-sticker">
+<div id="center">
+    <ul class = " Horizonlist">
+      
+        
+      <li><a href="/"> Main Page</a> </li>
+      <li> <a href="/Intro">About </a> </li>
+        <li> <a href="/Work"> work </a> </li>
+            <li> <a href="/Socials"> Socials</a> </li>
+           
+    </ul>
+    
+
+    </div>
+</header>
+
+<section class='message'>
+  <div class='Social_container'>
+<p class='social_msg'> Leave a message here Stranger....</p>
+ <form id='MSG_Form'> 
+  <label class='social_msg_s'> A message for Other visitors</label>
+  <textarea class='Big_msg' id= 'Msg_Board'type='text'name='Scraping_Box'> </textarea>
+  <input class='Social_BTn' id='Big_TxT_Sub' type ='submit' value ='submit'>
+<p class='social_msg' id='soc_msg'> Want To Reach Out? Send an Email Here</p>
+
+ </form>
+<span id='Message_Expand'>
+  <form  id='Email_Form' > 
+    <!--------------Legit Below------>
+   
+    <label for="name">Your name:</label>
+    <input class='sm_Input' type="text" id="Name" name="name" autocomplete="given-name" required>
+    
+    <label for="email">Your email:</label>
+    <input  class='sm_Input' type="email" id="email" name="email" 
+    required maxlength="30" autocomplete="email" required>
+    
+    <label for="message">Your Personal message:</label>
+    <textarea  class='Big_msg' id="message" name="msg" required></textarea>
+    
+ <!--------------HoneyPOt Below------>
+ <div class= 'Hidden_field' >
+ <label for="name_p"></label>
+ <input class='HP' tabindex='-1' type="text" id="Sus_Name" name="name"  autocomplete="off">
+ </div>
+
+ <input class='Social_BTn' id ='Email_Query'value='submit' type="submit">
+  </form>
+  
+   </span>
+   <div class='RoW'>
+    <p class='social_msg' > My Other Socials</p>
+   <div class= 'Link_Contain'>
+   <a href ='https://www.instagram.com/pastavoodoo766/' class='social_media_Link'> Instagram <a>
+  </div>
+  <div class= 'Link_Contain'>
+    <a href ='https://cara.app/pastawooloo' class='social_media_Link'> Cara <a>
+    </div>
+  </div>
+  </div>
+</section>
+</main>
+</body>
+</html>

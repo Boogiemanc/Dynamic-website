@@ -1,0 +1,16 @@
+{%extends '2D_Work.html'%}
+
+{%block fliter%}
+<div class='row'> 
+{% for X in  testingQ %}
+  {% if loop.index0 %5 == 0%}
+  <div class ='column'> 
+    {% endif %}
+    <img class='WorkDis'   src = {{X}} >
+   {% if loop.index0 % 5 == 4 or loop.last %}
+  </div>
+  {% endif %}
+{%endfor%}
+{%endblock%}
+
+  

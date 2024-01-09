@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html id ='WorkListDis' lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"  type="text/css" href="{{url_for ('static', filename= 'css/RestOfTheWeb.css')}}">
+    <title>My dynamic portfolio website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Playpen+Sans:wght@200&family=Roboto:wght@100;500;700&family=Saira+Condensed:wght@100;200;300&family=Sometype+Mono&family=Unbounded:wght@500&display=swap" 
+rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100&family=Libre+Barcode+39+Extended&family=Open+Sans&display=swap" rel="stylesheet">
+
+  
+  </head>
+  <body>
+<main>
+    
+
+<header class="main-sticker">
+<div id="center">
+    <ul class = " Horizonlist">
+      
+        
+      <li><a href="/"> Main Page</a> </li>
+      <li> <a href="/Intro">About </a> </li>
+        <li> <a href="/Work"> work </a> </li>
+            <li> <a href="/Socials"> Socials</a> </li>
+           
+    </ul>
+    
+
+    </div>
+</header>
+<section class='fliter'> 
+  <div id = 'DrpDwnDiv'class= 'dropdown'> 
+    <p id='IA'>Filter <p>
+<!----Filter by tags Button-->
+<button  id ='Sort' onclick=' expandlist()' class='btnDrop'> By Tags </button>
+<!----Drop Down starts-->
+<div class='nav_filter ' id = 'DropDwnCon'> 
+  <div id = 'formatting_tag'>
+    <form id='Tag_form'>
+    <input type='button' class='TagBtn active ' value = 'All '> </input>
+  {%for j in Tags %}
+  <input type='button'  class= "TagBtn" value = '{{j}}'> </input>
+    
+   {%endfor%}
+   <div>
+<input type='submit'  class='Tn_Sub' value='Filter'> </input>
+<!----Drop Down Ends-->
+   </div>
+  </form>
+</div>
+</div>
+</div>
+</section>
+{%block fliter%}
+<div class='row'> 
+{% for X in  testingQ %}
+  {% if loop.index0 %5 == 0%}
+  <div class ='column'> 
+    {% endif %}
+    <img class='WorkDis'   src = {{X}} >
+   {% if loop.index0 % 5 == 4 or loop.last %}
+  </div>
+  {% endif %}
+{%endfor%}
+
+
+  </div>
+
+  <script src="{{url_for ('static', filename= 'JS/Images.js')}}"></script>
+
+</div>
+{%endblock%}
+</main>
+</body>
+</html>

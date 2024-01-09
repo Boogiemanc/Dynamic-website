@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"  type="text/css" href="{{url_for ('static', filename= 'css/RestOfTheWeb.css')}}">
+    <link rel="stylesheet"  type="text/css" href="{{url_for ('static', filename= 'css/loading.css')}}">
+    <title>My dynamic portfolio website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Playpen+Sans:wght@200&family=Roboto:wght@100;500;700&family=Saira+Condensed:wght@100;200;300&family=Sometype+Mono&family=Unbounded:wght@500&display=swap" 
+rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100&family=Libre+Barcode+39+Extended&family=Open+Sans&display=swap" rel="stylesheet">
+    
+ 
+  </head>
+  <body>
+<main>
+    
+
+<header class="main-sticker">
+<div id="center">
+  <ul class = " Horizonlist">
+        
+          
+    <li><a href="/"> Main Page</a> </li>
+    <li> <a href="/Intro">About </a> </li>
+      <li> <a href="/Work"> My work </a> </li>
+          <li> <a href="/Socials"> Socials</a> </li>
+           
+    </ul>
+
+    </div>
+</header>
+<div>
+<div class = 'text_holder' id="L_pos"> 
+<div class=' display_reactionL'>Left LeftLeft LeftLeft LeftLeft LeftLeft Left</div>
+
+</div> 
+<div class = 'text_holder' id="R_pos"> 
+  <div class=' display_reactionR'>RightRightRightRightRightRightRightRight</div>
+  
+  </div>
+</div>
+<section>
+<div class="text_container" id='C_text'>
+<div class="img_contain-S" >
+<div class="thumbnail">
+<img class="imagec" src="Image\standholder.jpg" alt="placeholder">
+</div>
+</div>
+
+<div class="information_text">
+ {% if Trigger_Index >= 0.5 %}
+   {% for i in Para_Real %}
+   <p> {{i}} </p>
+    {% endfor %}
+  {% else %}
+  <canvas id="Drawing_Text"> </canvas>
+  <script type="text/javascript">
+   const Ws = {{ whispers_list|list |tojson|safe}} ;
+  </script>
+  <script src="{{url_for ('static', filename= 'JS/change.js')}}">
+  
+  </script>
+  {% for j in Para_Alt %}
+ 
+   <p>  {{j}} </p>
+    {% endfor %}
+
+
+
+  {% endif %}
+
+
+  </script>
+</div>
+</div>
+
+</section>
+<section> 
+
+
+
+</section>
+</main>
+</body>
+</html>
