@@ -37,7 +37,7 @@ ARTDB = DB.Table('My_Work_List', MD,autoload_with=engine)
 TAG_LINK = DB.Table('Tag_List', MD,autoload_with=engine)
 TAGDB = DB.Table('Tag_Table',MD,autoload_with=engine)
 CleaningHold = []
-#Tagging Query Starts Here#############################################
+#######Function to turn tuple to strings#############################################
 def cleaning(Tar):
  len_TOtal = len(Tar)
  newTaraRR = []
@@ -64,10 +64,10 @@ def show_Page1():
      RS3 = Res_whisp
      CleaningHold = [RS3]
      CleaningHold = cleaning(CleaningHold)
-     Re_Text=["Fascinated by creatures designs from Japanese media, I had created various concepts for multiple worlds for my personal work which are inspired by JRPGS, anime and Tokusatsu. Born and lived in a city which was heavily reference in Cyberpunk genres also helped me to create unique worlds with mechanics and organic matters."," With the help of virtual Reality, I create 3d assets and characters for social VR games using Blender, Unity, Photoshop, and Substance Painter. Letting me express my creativity in a virtual world."]
+     Re_Text=["Fascinated by creatures designs from Japanese media, I had created various concepts for multiple worlds for my personal work which are inspired by JRPGS, anime and Tokusatsu. Born and lived in a city which was heavily reference in Cyberpunk genres also helped me to create unique worlds with mechanics and organic matters."," With the help of virtual Reality, I create 3d assets and characters for social VR games using Blender, Unity, Photoshop, and Substance Painter. Letting me express my creativity in a virtual world."] ####Actual profile text
      Lore_Index = round( random.triangular(0,1,0.1),2)
      print(Lore_Index)
-     FakeText=["WʜɒɈ iʇ Ɉʜɘ ɔɿɘɒɈυɿɘƨ ʇɿom ɒnɔiɘnɈ ɈɘxɈ ɒɿɘ ɿɘɒl?I ʜɒb ɔɿɘɒɈɘb vɒɿioυƨ ɔonɔɘqɈƨ ʇoɿ mυlɈiqlɘ woɿlbƨ ʇoɿ mγ qɘɿƨonɒl woɿʞ, wʜiɔʜ ɒɿɘ inƨqiɿɘb dγ ɿɘɒl liʇɘ ɘvɘnɈƨ I ʜɒb ovɘɿ Ɉʜɘ γɘɒɿƨ. ઘoɿn ɒnb livɘb in ɒ bγƨɈoqiɒn ɔiɈγ wʜiɔʜ ʜɘɒvilγ ɿɘʇɘɿɘnɔɘ in Ɔγdɘɿqυnʞ ϱɘnɿɘƨ ɒlƨo ʜɘlqɘb mɘ Ɉo ɔɿɘɒɈɘ υnipυɘ woɿlbƨ wiɈʜ mɘɔʜɒniɔƨ ɒnb oɿϱɒniɔ mɒɈɈɘɿƨ. Ɔɒυƨɘ Ɉʜiƨ iƨ Ɉʜɘ onlγ mɘbiυm I ɔoυlb ɘxqɿɘƨƨ wiɈʜoυɈ dɘinϱ įυbϱɘb.","WiɈʜ Ɉʜɘ ʜɘlq oʇ viɿɈυɒl ЯɘɒliɈγ, I ɔɿɘɒɈɘ Ɛb ɒƨƨɘɈƨ ɒnb ɔʜɒɿɒɔɈɘɿƨ ʇoɿ ƨoɔiɒl VЯ ϱɒmɘƨ υƨinϱ ઘlɘnbɘɿ, UniɈγ, ԳʜoɈoƨʜoq, ɒnb ƧυdƨɈɒnɔɘ ԳɒinɈɘɿ. ⅃ɘɈɈinϱ mɘ ɘxqɿɘƨƨ mγ ɔɿɘɒɈiviɈγ in ɒ viɿɈυɒl woɿlb ɒnb qɿomoɈɘ mγ ɔυlɈυɿɘ wiɈʜoυɈ Ɉʜɘm noɈiɔinϱ."]
+     FakeText=["WʜɒɈ iʇ Ɉʜɘ ɔɿɘɒɈυɿɘƨ ʇɿom ɒnɔiɘnɈ ɈɘxɈ ɒɿɘ ɿɘɒl?I ʜɒb ɔɿɘɒɈɘb vɒɿioυƨ ɔonɔɘqɈƨ ʇoɿ mυlɈiqlɘ woɿlbƨ ʇoɿ mγ qɘɿƨonɒl woɿʞ, wʜiɔʜ ɒɿɘ inƨqiɿɘb dγ ɿɘɒl liʇɘ ɘvɘnɈƨ I ʜɒb ovɘɿ Ɉʜɘ γɘɒɿƨ. ઘoɿn ɒnb livɘb in ɒ bγƨɈoqiɒn ɔiɈγ wʜiɔʜ ʜɘɒvilγ ɿɘʇɘɿɘnɔɘ in Ɔγdɘɿqυnʞ ϱɘnɿɘƨ ɒlƨo ʜɘlqɘb mɘ Ɉo ɔɿɘɒɈɘ υnipυɘ woɿlbƨ wiɈʜ mɘɔʜɒniɔƨ ɒnb oɿϱɒniɔ mɒɈɈɘɿƨ. Ɔɒυƨɘ Ɉʜiƨ iƨ Ɉʜɘ onlγ mɘbiυm I ɔoυlb ɘxqɿɘƨƨ wiɈʜoυɈ dɘinϱ įυbϱɘb.","WiɈʜ Ɉʜɘ ʜɘlq oʇ viɿɈυɒl ЯɘɒliɈγ, I ɔɿɘɒɈɘ Ɛb ɒƨƨɘɈƨ ɒnb ɔʜɒɿɒɔɈɘɿƨ ʇoɿ ƨoɔiɒl VЯ ϱɒmɘƨ υƨinϱ ઘlɘnbɘɿ, UniɈγ, ԳʜoɈoƨʜoq, ɒnb ƧυdƨɈɒnɔɘ ԳɒinɈɘɿ. ⅃ɘɈɈinϱ mɘ ɘxqɿɘƨƨ mγ ɔɿɘɒɈiviɈγ in ɒ viɿɈυɒl woɿlb ɒnb qɿomoɈɘ mγ ɔυlɈυɿɘ wiɈʜoυɈ Ɉʜɘm noɈiɔinϱ."]##mirrored text
     
     return render_template('Introduction.html',Para_Real = Re_Text, Para_Alt=FakeText,Trigger_Index =Lore_Index,whispers_list =CleaningHold[0])
 
