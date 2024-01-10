@@ -1,11 +1,10 @@
-
 var Inputs_TextBox = document.getElementsByClassName('sm_Input').value;
  var Messages_Box = document.getElementsByClassName('Big_msg').value;
 
 
 
 
-//SEND Messages to the DB
+//SEND Messages to the DB, locking both submit nuttons to prevent multiple submissions in short duration
 
 function timeout_sub(){
   document.getElementById("Big_TxT_Sub").disabled = true;
