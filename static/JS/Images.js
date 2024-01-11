@@ -35,7 +35,7 @@ function expandlist(){
     
 
 
-
+///function to close filter menu if out of range i.e not inclued in .dropdown
 window.onclick = function(event){
     if(!event.target.closest(".dropdown")){
         var drpDwn = document.getElementsByClassName('nav_filter');
@@ -59,7 +59,7 @@ window.onclick = function(event){
 }
 
 window.onload = function(){
-
+//send tag froms to flask
     const Form_Ele = document.getElementById('Tag_form');
 
 
