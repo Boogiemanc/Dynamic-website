@@ -112,12 +112,16 @@ def show_Page2():
 
     if request.method == 'POST':
         if 'Name' in request.form:
+            
        
          
-         Name = nh3.clean_text(request.form.get('Name', default="Error"))
+         Name = nh3.clean(request.form.get('Name', default="Error"))
          Email =nh3.clean_text( request.form.get('Email', default="Error"))
          Msg = request.form.get('Message', default="Error")
-         Msg = nh3.clean_text(Msg)
+         if nh3.is_html(Msg) :
+             Msg = nh3.clean(Msg)
+             Msg = 'MESSAGE CONTAIN HTML: ' + Msg
+         print(Name+ 'HEREHEHWEWEJKEWH')
          msg = Message('Auto_Message from '+ Name,
                       sender=Email,
                       
@@ -129,7 +133,10 @@ def show_Page2():
         else:
             
          UID = ''.join(secrets.choice(string.ascii_letters)for _ in range(5))
-         oRIGINAL_Msg =  nh3.clean_text(request.form.get('Msg',default="Error"))
+         oRIGINAL_Msg =  request.form.get('Msg',default="Error")
+         if nh3.is_html(oRIGINAL_Msg):
+             oRIGINAL_Msg = nh3.clean(oRIGINAL_Msg)
+             
         
          BroKeN =list(oRIGINAL_Msg)
          random.shuffle(BroKeN)
