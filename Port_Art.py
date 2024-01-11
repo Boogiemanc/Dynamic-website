@@ -87,7 +87,7 @@ def show_Refresh():
          return render_template('2D_work_Extended.html', testingQ =ARTQuery,Tags = CleaningHold[0])
         else:
         ###GET TAGED IMAGE LINKS##################
-           ARTWK = Select(ARTDB.c.ImageLink,ARTDB.c.Work_Name,ARTDB.c.CompleteDate ).join(TAGDB, ARTDB.c.Work_ID== TAGDB.c.Work_ID).join(TAG_LINK, TAG_LINK.c.Tag_Id==TAGDB.c.Tag_ID).where(TAG_LINK.c.Tag_Name == Tags)
+           ARTWK = Select(ARTDB.c.ImageLink,ARTDB.c.Work_Name,ARTDB.c.CompleteDate ).join(TAGDB, ARTDB.c.Work_ID== TAGDB.c.Work_ID).join(TAG_LINK, TAG_LINK.c.Tag_Id==TAGDB.c.Tag_ID).where(TAG_LINK.c.Tag_Name == Tags).order_by(ARTDB.c.Work_ID)
            ARTQuery = connect.execute(ARTWK).fetchall()
           
            
@@ -97,7 +97,7 @@ def show_Refresh():
 def show_Page3():
     if request.method == 'GET':
      Tag_Name = Select(TAG_LINK.c.Tag_Name)
-     ARTLINK = Select(ARTDB.c.ImageLink,ARTDB.c.Work_Name,ARTDB.c.CompleteDate)
+     ARTLINK = Select(ARTDB.c.ImageLink,ARTDB.c.Work_Name,ARTDB.c.CompleteDate).order_by(ARTDB.c.Work_ID)
      ARTQuery = connect.execute(ARTLINK).fetchall()
      Tag_NameQuery = connect.execute(Tag_Name).fetchall()
      CleaningHold = [Tag_NameQuery]
