@@ -121,7 +121,6 @@ def show_Page2():
          if nh3.is_html(Msg) :
              Msg = nh3.clean(Msg)
              Msg = 'MESSAGE CONTAIN HTML: ' + Msg
-         print(Name+ 'HEREHEHWEWEJKEWH')
          msg = Message('Auto_Message from '+ Name,
                       sender=Email,
                       
