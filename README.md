@@ -1,15 +1,9 @@
 # c23074472_cmt120_cw2
 
 
-Dynamic website for CMT120_cw2
+Dynamic website 
 
 
-studentID: c23074472
-
-
-URL: http://c-23074472-cmt-120-c-w-2-git-cmt120cw2.apps.openshift.cs.cf.ac.uk/
-
-Source code  inside  master branch**********
 <h1>Reference</h1>
 
 
