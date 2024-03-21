@@ -17,8 +17,8 @@ app.config.update(dict(
     MAIL_PORT = 465,
     MAIL_USE_TLS = False,
     MAIL_USE_SSL = True,
-    MAIL_USERNAME = 'pastawooloo766@gmail.com',
-    MAIL_PASSWORD = "roih jtom vczb ymif",
+    MAIL_USERNAME = '',
+    MAIL_PASSWORD = "",
 ))
 
 #######################################DB SETUP####################################
