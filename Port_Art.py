@@ -124,7 +124,7 @@ def show_Page2():
          msg = Message('Auto_Message from '+ Name,
                       sender=Email,
                       
-                      recipients=["pastawooloo766@gmail.com"])
+                      recipients=["@gmail.com"])
          msg.body = Msg + ' <<< From email:'+Email
          mail.connect()
         
